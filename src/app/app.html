@@ -1,0 +1,35 @@
+<!-- two way data binding -->
+<div class="wrapper">
+  <div class="container">
+    <form #Form="ngForm" (ngSubmit)="submitForm(Form)" novalidate>
+      <h1>Form</h1>
+      <label for="name">Name</label> &nbsp; &nbsp;
+      <input name="name" id="name" type="text" [(ngModel)]="name" required />
+      <br />
+      <br />
+      <label for="email">Email</label> &nbsp; &nbsp;
+      <input name="email" id="name" type="email" [(ngModel)]="email" required />
+      <br />
+      <br />
+      <label for="phNo">Phone Number</label> &nbsp; &nbsp;
+      <input
+        name="phNo"
+        id="phNo"
+        type="tel"
+        [(ngModel)]="phNo"
+        required
+        pattern="^[6-9][0-9]{9}$"
+      />
+    </form>
+
+    <button type="submit">Submit</button>
+  </div>
+
+  <br /><br />
+  <div class="container">
+    <h1>Display</h1>
+    <p><strong>Name : </strong>{{name}}</p>
+    <p><strong>Email : </strong> {{email}}</p>
+    <p><strong>Phone Number : </strong>{{phNo}}</p>
+  </div>
+</div>
