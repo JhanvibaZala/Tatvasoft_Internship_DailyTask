@@ -1,1 +1,1 @@
-Day 5 completed
+Day 5 task completed
